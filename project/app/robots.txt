@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://f24tech.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Block admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /config/
+
+# Allow important pages
+Allow: /
+Allow: /services/
+Allow: /crm-solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /portfolio/
