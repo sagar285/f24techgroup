@@ -43,19 +43,19 @@ const Header = () => {
               </button>
               <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 space-y-2">
-                  <Link href="/services/java" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                  <Link href="/java" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                     Java Development
                   </Link>
-                  <Link href="/services/javascript" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                  <Link href="/javaScript" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                     JavaScript Solutions
                   </Link>
-                  <Link href="/services/python" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                  <Link href="/python" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                     Python Development
                   </Link>
-                  <Link href="/services/php" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                  <Link href="/php" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                     PHP Development
                   </Link>
-                  <Link href="/services/mobile" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
+                  <Link href="/mobile" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded">
                     Mobile Apps
                   </Link>
                 </div>

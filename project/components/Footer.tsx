@@ -56,32 +56,32 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/java" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="/java" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Java Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/javascript" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="/javaScript" className="text-gray-300 hover:text-blue-400 transition-colors">
                   JavaScript Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/python" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="python" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Python Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/php" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="/php" className="text-gray-300 hover:text-blue-400 transition-colors">
                   PHP Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="mobile" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Mobile Apps
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Link href="/cloud" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Cloud Solutions
                 </Link>
               </li>
