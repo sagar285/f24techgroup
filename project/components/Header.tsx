@@ -24,9 +24,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">F</span>
-            </div>
+            
+            <img src="https://pb.f24tech.com/assets/photos/LOGO.svg" alt="F24Tech Logo" width={28} height={28}  />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               F24Tech
             </span>

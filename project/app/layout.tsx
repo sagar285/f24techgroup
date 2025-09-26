@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Providers } from './providers';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({ 
@@ -12,12 +14,18 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'F24Tech - Leading Technology Solutions Provider | Java, Python, PHP, CRM Development',
+  metadataBase: new URL(process.env.NEXTAUTH_URL || 'https://f24tech.com'),
+  title: {
+    default: 'F24Tech - Leading Technology Solutions Provider | Java, Python, PHP, CRM Development',
+    template: '%s | F24Tech'
+  },
   description: 'F24Tech provides comprehensive technology solutions including Java frameworks, JavaScript, Python, PHP development, Zoho, NetSuite implementation, and custom CRM software development in India.',
   keywords: 'f24tech, f24tech softwares, f24tech india, f24tech group, java frameworks, javascript development, python programming, php development, crm software, zoho implementation, netsuite consulting, custom software development',
   authors: [{ name: 'F24Tech' }],
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+  alternates: {
+    canonical: 'https://f24tech.com',
+  },
   openGraph: {
     title: 'F24Tech - Leading Technology Solutions Provider',
     description: 'Comprehensive technology solutions for modern businesses',
@@ -48,11 +56,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <head>
-        <link rel="canonical" href="https://f24tech.com" />
-        <script
+    <html lang="en" className={poppins.variable}>
+      <body className={`${inter.className} font-poppins`}>
+        {/* Move schema script here - NOT in <head> */}
+        <Script
+          id="schema-org"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -69,7 +79,7 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://linkedin.com/company/f24tech",
-                "https://twitter.com/f24tech"
+                "https://twitter.com/f24techindia"
               ],
               "offers": {
                 "@type": "Service",
@@ -78,11 +88,12 @@ export default function RootLayout({
             })
           }}
         />
-      </head>
-      <body className={`${inter.className} font-poppins`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

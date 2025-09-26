@@ -1,52 +1,38 @@
+// components/Footer.tsx - Updated with legal links section
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Github,
-  ExternalLink
-} from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Github, Mail, Phone, MapPin, ExternalLink, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                F24Tech
-              </span>
-            </Link>
-            
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              F24Tech is a leading technology solutions provider specializing in Java, JavaScript, Python, PHP development, and comprehensive CRM solutions including Zoho, NetSuite, and custom development.
+          <div>
+            <h3 className="text-xl font-bold mb-6">F24Tech</h3>
+            <p className="text-gray-300 mb-6">
+              Leading provider of technology solutions specializing in Java, JavaScript, Python, PHP development, 
+              and comprehensive CRM implementations including Zoho and NetSuite.
             </p>
 
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/company/94810089/admin/dashboard/" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="https://x.com/f24techindia" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="https://www.facebook.com/people/f24techindia/" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
-                <Github className="w-5 h-5" />
+              <a href="https://www.instagram.com/f24techindia/" className="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors">
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -132,8 +118,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <Phone className="w-5 h-5 text-blue-400 mr-3 mt-1" />
                 <div>
-                  <p className="text-gray-300">+91 (XXX) XXX-XXXX</p>
-                  <p className="text-gray-300">+1 (XXX) XXX-XXXX</p>
+                  <p className="text-gray-300">+91 (895) 077-3419</p>
+                  <p className="text-gray-300">+84 (398) 618-489</p>
                 </div>
               </div>
               
@@ -148,7 +134,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
                 <div>
-                  <p className="text-gray-300">India</p>
+                  <p className="text-gray-300">Indore, India</p>
                   <p className="text-gray-300">Serving Worldwide</p>
                 </div>
               </div>
@@ -178,27 +164,29 @@ const Footer = () => {
               </p>
             </div>
             
-            <div className="flex flex-wrap justify-start md:justify-end gap-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <div className="flex flex-wrap gap-4 md:justify-end">
+              <Link href="/about" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                About Us
+              </Link>
+              <Link href="/blog" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                Blog
+              </Link>
+              <Link href="/portfolio" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/contact" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                Contact
+              </Link>
+              <Link href="/privacy-policy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <Link href="/terms-of-service" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <Link href="/sitemap-page" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Sitemap
               </Link>
             </div>
-          </div>
-
-          {/* SEO Keywords */}
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 text-xs">
-              <strong>Keywords:</strong> F24Tech, F24Tech Softwares, F24Tech India, F24Tech Group, Java Spring Boot, 
-              React Angular Vue, Python Django Flask, PHP Laravel, Zoho CRM, NetSuite, Salesforce, Custom CRM, 
-              Mobile App Development, Cloud Solutions, Enterprise Software Development, API Development, 
-              Database Design, Full Stack Development, CRM Implementation, Business Process Automation
-            </p>
           </div>
         </div>
       </div>

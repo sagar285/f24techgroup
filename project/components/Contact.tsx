@@ -80,8 +80,8 @@ const Contact = () => {
                 <Phone className="w-6 h-6 text-blue-400 mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="text-gray-300">+91 (XXX) XXX-XXXX</p>
-                  <p className="text-gray-300">+1 (XXX) XXX-XXXX (US)</p>
+                  <p className="text-gray-300">+91 (895) 077-3419</p>
+                  <p className="text-gray-300">+84 (398) 618-489 (Vietnam)</p>
                 </div>
               </div>
               
@@ -238,7 +238,7 @@ const Contact = () => {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-blue-100 mb-6">
-              Join 50+ satisfied clients who trust F24Tech for their technology needs
+              Join 500+ satisfied clients who trust F24Tech for their technology needs
             </p>
             <a 
               href="/get-quote"

@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
+  webpack: (config) => {
+    // Handle SVG imports
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    
+    return config;
   },
-  images: { unoptimized: true },
+  
+  // Image optimization domains (if using external images)
+  images: {
+    domains: ['images.pexels.com', 'placehold.co'],
+  },
 };
 
 module.exports = nextConfig;

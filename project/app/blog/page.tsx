@@ -1,31 +1,30 @@
+// app/blog/page.tsx
 import React from 'react';
 import { Metadata } from 'next';
-import { getConnection } from '@/lib/db';
-import BlogList from '@/components/blog/BlogList';
+import Blog from '@/components/Blog';
 
 export const metadata: Metadata = {
-  title: 'Technology Blog - Java, Python, PHP, CRM Insights | F24Tech',
-  description: 'Stay updated with latest technology trends, development frameworks, CRM solutions, and industry insights from F24Tech experts.',
-  keywords: 'technology blog, java frameworks, python development, php tutorials, crm insights, software development blog',
+  title: 'Technology Blog - Latest Tech Insights & Tutorials | F24Tech',
+  description: 'Stay updated with latest technology trends, development tutorials, CRM insights, and industry best practices from F24Tech experts.',
+  keywords: 'technology blog, development tutorials, crm insights, java tutorials, javascript guides, python tips',
 };
 
-const BlogPage = async () => {
-  let posts = [];
-  
-  try {
-    const connection = await getConnection();
-    const [blogPosts] = await connection.execute(
-      'SELECT * FROM blog_posts WHERE status = ? ORDER BY published_at DESC',
-      ['published']
-    );
-    posts = blogPosts as any[];
-  } catch (error) {
-    console.error('Error fetching blog posts:', error);
-  }
-
+const BlogPage = () => {
   return (
     <div className="pt-16">
-      <BlogList posts={posts} />
+      <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Tech Insights & Tutorials
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Expert insights on technology, development frameworks, CRM solutions, and industry best practices
+            </p>
+          </div>
+        </div>
+      </section>
+      <Blog />
     </div>
   );
 };
