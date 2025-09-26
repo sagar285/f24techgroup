@@ -9,42 +9,42 @@ const services = [
     title: 'Custom Software Development',
     description: 'Expert development using Java frameworks like Spring Boot, Hibernate, JSF, and modern JavaScript frameworks including React, Angular, and Vue.js.',
     technologies: ['Java Spring Boot', 'React.js', 'Angular', 'Vue.js', 'Node.js'],
-    link: '/services/custom-development'
+    link: '/services/customdev'
   },
   {
     icon: <Globe className="w-12 h-12" />,
     title: 'Web Development',
     description: 'Full-stack web development with Python Django, Flask, PHP Laravel, Symfony, and modern front-end technologies.',
     technologies: ['Python Django', 'PHP Laravel', 'Next.js', 'TypeScript', 'PostgreSQL'],
-    link: '/services/web-development'
+    link: '/services/webdev'
   },
   {
     icon: <Smartphone className="w-12 h-12" />,
     title: 'Mobile App Development',
     description: 'Native and cross-platform mobile applications using React Native, Flutter, and native iOS/Android development.',
     technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin'],
-    link: '/services/mobile-development'
+    link: '/services/mobiledev'
   },
   {
     icon: <Database className="w-12 h-12" />,
     title: 'Database Solutions',
     description: 'Database design, optimization, and management with MySQL, PostgreSQL, MongoDB, and Oracle database systems.',
     technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'Redis'],
-    link: '/services/database-solutions'
+    link: '/services/database'
   },
   {
     icon: <Cloud className="w-12 h-12" />,
     title: 'Cloud Services',
     description: 'Cloud migration, deployment, and management on AWS, Azure, Google Cloud, and other cloud platforms.',
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'],
-    link: '/services/cloud-services'
+    link: '/services/cloud_service'
   },
   {
     icon: <Shield className="w-12 h-12" />,
     title: 'Enterprise Solutions',
     description: 'Enterprise-grade applications with robust security, scalability, and integration capabilities.',
     technologies: ['Microservices', 'API Gateway', 'Security', 'Integration', 'DevOps'],
-    link: '/services/enterprise-solutions'
+    link: '/services/enterprise'
   }
 ];
 

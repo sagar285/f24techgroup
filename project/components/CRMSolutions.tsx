@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation'; // Import useRouter
 import { Database, Users, BarChart3, Settings, Zap, Shield } from 'lucide-react';
 
 const crmSolutions = [
@@ -9,46 +10,58 @@ const crmSolutions = [
     description: 'Complete Zoho CRM setup, customization, and integration services. We help businesses maximize their Zoho investment with tailored configurations.',
     features: ['Custom Fields & Workflows', 'Third-party Integrations', 'Data Migration', 'Training & Support'],
     icon: <Database className="w-8 h-8" />,
-    color: 'from-orange-500 to-red-500'
+    color: 'from-orange-500 to-red-500',
+    link: '/crm/zoho' //
   },
   {
     title: 'NetSuite Consulting',
     description: 'Expert NetSuite implementation, customization, and optimization services for enterprise-level businesses requiring comprehensive ERP solutions.',
     features: ['ERP Implementation', 'Custom Scripts', 'SuiteScript Development', 'Business Process Optimization'],
     icon: <BarChart3 className="w-8 h-8" />,
-    color: 'from-blue-500 to-purple-500'
+    color: 'from-blue-500 to-purple-500',
+    link: '/crm/netsuite' //
+
   },
   {
     title: 'Custom CRM Development',
     description: 'Bespoke CRM solutions built from scratch using modern technologies to meet unique business requirements and workflows.',
     features: ['Custom Architecture', 'API Development', 'Mobile CRM Apps', 'Advanced Analytics'],
     icon: <Settings className="w-8 h-8" />,
-    color: 'from-green-500 to-teal-500'
+    color: 'from-green-500 to-teal-500',
+    link: '/crm/custom' //
+
   },
   {
     title: 'Salesforce Solutions',
     description: 'Salesforce implementation, customization, and development services including Lightning components and Apex development.',
     features: ['Lightning Development', 'Apex & Visualforce', 'Integration Services', 'Custom Apps'],
     icon: <Zap className="w-8 h-8" />,
-    color: 'from-blue-600 to-indigo-600'
+    color: 'from-blue-600 to-indigo-600',
+    link: '/crm/salesforce' //
+
   },
   {
     title: 'HubSpot Integration',
     description: 'HubSpot setup, customization, and integration with existing business systems for comprehensive inbound marketing and sales automation.',
     features: ['Marketing Automation', 'Sales Pipeline Setup', 'Custom Properties', 'Reporting Dashboards'],
     icon: <Users className="w-8 h-8" />,
-    color: 'from-orange-600 to-pink-500'
+    color: 'from-orange-600 to-pink-500',
+    link: '/crm/hubspot' //
+
   },
   {
     title: 'Microsoft Dynamics',
     description: 'Microsoft Dynamics 365 implementation and customization for businesses looking for integrated business applications.',
     features: ['D365 Setup', 'Power Platform', 'Custom Entities', 'Business Intelligence'],
     icon: <Shield className="w-8 h-8" />,
-    color: 'from-purple-600 to-blue-600'
+    color: 'from-purple-600 to-blue-600',
+    link: '/crm/dynamics' //
   }
 ];
 
 const CRMSolutions = () => {
+    const router = useRouter(); // initialize router
+
   return (
     <section id="crm-solutions" className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +104,10 @@ const CRMSolutions = () => {
                 ))}
               </div>
 
-              <button className="text-blue-400 font-semibold hover:text-white transition-colors group">
+              <button 
+                className="text-blue-400 font-semibold hover:text-white transition-colors group"
+                onClick={() => router.push(solution.link)} // Redirect on click
+              >
                 Learn More
                 <svg className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
